@@ -1,8 +1,8 @@
-<h1> 🚢 Breast Cancer Prediction Model </h1>
-A machine learning project focused on predicting passenger survival on the Titanic using classification models, feature engineering, and demographic and travel-related data.
+<h1> ♀️ Breast Cancer Prediction Model </h1>
+A machine learning project focused on predicting whether a breast tumor is malignant or benign using classification models, feature engineering, and a well-known dataset.
 <hr>
 <h2> 📌 Project Overview </h2> 
-This project builds a complete end-to-end machine learning workflow for predicting passenger survival on the Titanic, including data cleaning, exploratory data analysis, feature engineering, model training, and performance evaluation. The goal is to understand the key factors influencing survival and develop a robust classification model with strong predictive accuracy.
+This project follows a complete machine learning workflow to predict breast cancer diagnosis. Using a dataset from the sklearn Machine Learning Repository, I performed data preprocessing, feature standardization, logistic regression modeling, and performance evaluation. The goal was to identify key patterns and build a strong predictive model.
 <hr>
 <h2> 🧰 Tech Stack </h2> 
 <ul>    
@@ -13,23 +13,21 @@ This project builds a complete end-to-end machine learning workflow for predicti
 <hr>
 <h2> 🔄 Workflow Summary </h2> 
 <h3> 1. Data Collection: </h3>
-The dataset was sourced from Kaggle’s Titanic competition. It includes passenger details such as age, class, gender, fare, and cabin information. Each entry corresponds to a passenger aboard the Titanic, along with a binary label indicating survival.
+The dataset was sourced from sklearn datasets. Each entry corresponds to a passenger aboard the Titanic. After importing the data, a dataframe was created for analysis.
 <hr>
-<h3> 2. Data Preprocessing: </h3>
-Missing values in the age feature were addressed by imputing class-specific medians. For each passenger class, the missing age values were replaced by the median age of that class. Additionally, categorical variables such as sex, class, and embarked were converted into numerical form using one-hot encoding.
+<h3> 2. Feature and Target Separation: </h3>
+I separated the dataset into features (X) and the target (Y). This allowed me to focus on predicting the tumor’s diagnosis
 <hr>
-<h3> 3. Exploratory Data Analysis (EDA): </h3>
-The EDA phase involved visualizing relationships between key features and survival rates. For example, we plotted age distributions by class and gender, examined survival rates across different ticket classes, and used heatmaps to identify correlations between features and survival.
+<h3> 3. Data Standardization: </h3>
+I applied standard scaling to the feature set, ensuring all features had a mean of zero and standard deviation of one.
 <hr>
-<h3> 4. Feature Engineering: </h3>
-Although no entirely new features were created, we engineered the data by handling missing values systematically. The age imputations ensured that each class was treated independently. These refined features, along with encoded categorical variables, provided a solid foundation for modeling.
+<h3> 4. Model Training: </h3>
+A logistic regression model was trained using the standardized data. I split the dataset into training and testing sets and evaluated the model’s performance.
 <hr>
-<h3> 5. Modeling and Evaluation: </h3>
-We applied a logistic regression model to predict survival. The dataset was split into training and testing sets. Model performance was evaluated using accuracy as the primary metric. Based on these results, we generated predictions on unseen data.
+<h3> 5. Model Evaluation: </h3>
+The model was evaluated using accuracy. It achieved 98% accuracy on both the training set and the test set. After hyperparameter tuning with grid search, the accuracy remained stable at 98%.
 <hr>
 <h2> 📈 Key Findings </h2> 
-<ul>    
-    <li> After class-specific median imputation, survival rates still differed significantly by class, with first-class passengers having the highest survival. </li>
-    <li> EDA showed that age was a key factor; children were far more likely to survive than adults, and women also had a higher survival rate compared to men. </li>
-</ul>
+<li>The standardized features helped the model achieve high accuracy. </li> 
+<li> Logistic regression effectively distinguished between malignant and benign tumors, maintaining strong performance. </li>
 <hr>
